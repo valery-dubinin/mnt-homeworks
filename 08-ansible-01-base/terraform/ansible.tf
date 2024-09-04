@@ -4,6 +4,5 @@ resource "local_file" "hosts_templatefile" {
   { databases = yandex_compute_instance.foreach_instance
   })
 
-  #filename = "${abspath(path.module)}/hosts.ini"
-  filename = "${abspath(path.module)}/../ansible/inventory/hosts.ini"
+  filename = "${abspath(path.module)}/../playbook/inventory/hosts.ini"
 }
