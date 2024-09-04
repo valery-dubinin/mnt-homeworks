@@ -1,0 +1,14 @@
+[servers]
+
+%{~ for i in databases ~}
+
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]}
+%{~ endfor ~}
+
+
+[all:vars] 
+
+ansible_ssh_common_args='-i /home/user/yandexkey -o UserKnownHostsFile=/dev/null'
+ansible_connection='ssh'
+ansible_ssh_port='22'
+ansible_user='user'
