@@ -9,20 +9,80 @@
 ## Основная часть
 
 1. Попробуйте запустить playbook на окружении из `test.yml`, зафиксируйте значение, которое имеет факт `some_fact` для указанного хоста при выполнении playbook.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/01.png)
+
 2. Найдите файл с переменными (group_vars), в котором задаётся найденное в первом пункте значение, и поменяйте его на `all default fact`.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/02.png)
+
 3. Воспользуйтесь подготовленным (используется `docker`) или создайте собственное окружение для проведения дальнейших испытаний.
+
+### Решение:
+Инфраструктура написана на тераформе. Код приложен.
+
+https://github.com/valery-dubinin/mnt-homeworks/tree/MNT-video/08-ansible-01-base/terraform
+
+Ко всему прочему делает инвентори, правда в ini формате.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/03.png)
+
 4. Проведите запуск playbook на окружении из `prod.yml`. Зафиксируйте полученные значения `some_fact` для каждого из `managed host`.
 5. Добавьте факты в `group_vars` каждой из групп хостов так, чтобы для `some_fact` получились значения: для `deb` — `deb default fact`, для `el` — `el default fact`.
 6.  Повторите запуск playbook на окружении `prod.yml`. Убедитесь, что выдаются корректные значения для всех хостов.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/04.png)
+
 7. При помощи `ansible-vault` зашифруйте факты в `group_vars/deb` и `group_vars/el` с паролем `netology`.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/05.png)
+
 8. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь в работоспособности.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/06.png)
+
 9. Посмотрите при помощи `ansible-doc` список плагинов для подключения. Выберите подходящий для работы на `control node`.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/07.png)
+
+
 10. В `prod.yml` добавьте новую группу хостов с именем  `local`, в ней разместите localhost с необходимым типом подключения.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/08.png)
+
+
 11. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь, что факты `some_fact` для каждого из хостов определены из верных `group_vars`.
+
+### Решение:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-01-base/img/09.png)
+
+
 12. Заполните `README.md` ответами на вопросы. Сделайте `git push` в ветку `master`. В ответе отправьте ссылку на ваш открытый репозиторий с изменённым `playbook` и заполненным `README.md`.
+
+### Решение:
+
+Ссылка на коммит с решением:
+
+https://github.com/netology-code/mnt-homeworks/commit/b05f7a971b03335dbe611fff404415dd10f297bf
+
 13. Предоставьте скриншоты результатов запуска команд.
 
-## Необязательная часть
+## Необязательная часть - НЕ ДЕЛАЛ!
 
 1. При помощи `ansible-vault` расшифруйте все зашифрованные файлы с переменными.
 2. Зашифруйте отдельное значение `PaSSw0rd` для переменной `some_fact` паролем `netology`. Добавьте полученное значение в `group_vars/all/exmp.yml`.
