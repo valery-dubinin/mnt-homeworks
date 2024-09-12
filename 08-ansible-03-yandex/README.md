@@ -20,8 +20,24 @@
 
 ---
 
-### Как оформить решение задания
+## Решение
 
-Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
+Ссылка на финальный коммит: https://github.com/netology-code/mnt-homeworks/commit/d8a7202b7b013f5e3f9717d6037e1e834f549b2c
+
+### Скрины:
+
+Раскатывается:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-03-yandex/img/4.png)
+
+Clickhouse пустой, поэтому ничего и не отображается в lighthouse
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-03-yandex/img/1.png)
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-03-yandex/img/2.png)
+
+Linter:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/08-ansible-03-yandex/img/4.png)
 
 ---
