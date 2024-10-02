@@ -38,3 +38,63 @@
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
 ---
+
+## Решение
+
+1. Создайте новый проект в teamcity на основе fork.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/01.png)
+
+2. Сделайте autodetect конфигурации.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/02.png)
+
+3. Сохраните необходимые шаги, запустите первую сборку master.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/03.png)
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/04.png)
+
+4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
+5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
+6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
+7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/05.png)
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/06.png)
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/07.png)
+
+8. Мигрируйте `build configuration` в репозиторий.
+
+Ссылка на конфигурацию: https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/teamcity_build.conf
+
+9. Создайте отдельную ветку `feature/add_reply` в репозитории.
+10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/09.png)
+
+
+11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/10.png)
+
+12. Сделайте push всех изменений в новую ветку репозитория.
+13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/08.png)
+
+14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/11.png)
+
+15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
+16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
+17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/12.png)
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/13.png)
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/09-ci-05-teamcity/img/14.png)
+
+
+18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
+19. В ответе пришлите ссылку на репозиторий.
+
