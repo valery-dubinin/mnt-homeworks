@@ -1,0 +1,10 @@
+(1-rate(node_cpu_seconds_total{job="nodeexporter", mode="idle"}[1m]))*100
+
+A: node_load1
+B: node_load5
+C: node_load15
+
+node_memory_MemFree_bytes
+
+node_filesystem_free_bytes{mountpoint="/"}
+
