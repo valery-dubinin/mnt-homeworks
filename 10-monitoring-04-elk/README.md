@@ -44,6 +44,18 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
+## Решение 1
+
+Сриншот docker ps
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/01.png)
+
+Работающая кибана
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/02.png)
+
+#
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
@@ -52,6 +64,25 @@ Filebeat следует сконфигурировать для отправки
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
+
+## Решение 2
+
+Создаем index-pattern
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/03.png)
+
+Готовый index-pattern
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/04.png)
+
+Отображение логов:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/05.png)
+
+Поиск и фильтрация:
+
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/06.png)
+![img](https://github.com/valery-dubinin/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/img/07.png)
  
 ---
 
